@@ -10,11 +10,12 @@ const [formData, setFormData] = useState({
   email: '',
   phone: '',
   address: '',
+  Shortlist:false
 //   department: '',
 //   jobTitle: ''
   });
 
-  const { name,email, phone, address, department, jobTitle } = formData;
+  const { name,email, phone, address} = formData;
 
   const onChange = (e) => {
 	
@@ -32,7 +33,7 @@ const [formData, setFormData] = useState({
 		'data':formData,
 	}).then((res)=>{
 		
-			navigate("/")
+			navigate("/submitted")
 			console.log(res);
 	});
 

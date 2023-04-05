@@ -8,10 +8,7 @@ const WithAuth = (Component) => {
       if (!token) {
         return Navigate('/login');
       }
-
-      // Verify the JWT with the server and get the user info
-
-      return <Component user={user} />;
+      return <Component/>;
     }
   };
 };

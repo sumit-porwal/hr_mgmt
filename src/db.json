@@ -1,92 +1,37 @@
 {
   "applicants": [
     {
-      "id": 1,
-      "name": "ohn Doe",
-      "email": "johndoe@example.com",
-      "phone": "555-555-5555",
-      "address": "123 Main St, Anytown USA"
+      "name": "sanjay",
+      "email": "asdfas@df",
+      "phone": "12345",
+      "address": "sumit hosue",
+      "Shortlist": false,
+      "createdAt": 1680677179434,
+      "id": 1
     },
     {
-      "name": "ummidwar",
-      "email": "sanjay@gmail.com",
+      "name": "sanjay",
+      "email": "asdfas@df",
       "phone": "12345",
-      "address": "mars",
+      "address": "sdfsa",
+      "Shortlist": false,
+      "createdAt": 1680677187795,
       "id": 2
     }
   ],
   "employees": [
     {
-      "id": 123,
-      "name": "ohn Doe",
-      "email": "johndoe@example.com",
-      "phone": "555-555-5555",
-      "address": "123 Main St, Anytown USA",
-      "department": "Marketing",
-      "jobTitle": "Marketing Manager"
-    },
-    {
-      "name": "mark",
-      "email": "marc@mars.com",
-      "phone": "12345",
-      "address": "mars",
-      "department": "space",
-      "jobTitle": "atroguy",
-      "id": 124
-    },
-    {
-      "name": "mark",
-      "email": "marc@mars.com",
-      "phone": "12345",
-      "address": "mars",
-      "department": "space",
-      "jobTitle": "atroguy",
-      "id": 125
-    },
-    {
-      "name": "mark",
-      "email": "marc@mars.com",
-      "phone": "12345",
-      "address": "mars",
-      "department": "space",
-      "jobTitle": "atroguy",
-      "id": 126
-    },
-    {
-      "name": "mark",
-      "email": "marc@mars.com",
-      "phone": "12345",
-      "address": "mars",
-      "department": "space",
-      "jobTitle": "atroguy",
-      "id": 127
-    },
-    {
       "name": "sanjay",
-      "email": "sanjay@gmail.com",
-      "phone": "523749",
-      "address": "sanjay houses",
-      "department": "missionary",
-      "jobTitle": "here of the town",
-      "id": 128
-    },
-    {
-      "name": "Sumit porwal",
-      "email": "sumitporwal938@gmail.com",
-      "phone": "08959070592",
-      "address": "Chandan Nagar, Ghatabillod",
-      "department": "Software ",
-      "jobTitle": "In Geneva OK ",
-      "id": 129
-    },
-    {
-      "name": "Sumit porwal",
-      "email": "sumitporwal938@gmail.com",
-      "phone": "08959070592",
-      "address": "Chandan Nagar, Ghatabillod",
-      "department": "Software ",
-      "jobTitle": "In Geneva OK ",
-      "id": 130
+      "email": "employee@mail.com",
+      "phone": "12345",
+      "address": "sumit hosue",
+      "manager": false,
+      "password": 1234,
+      "department": "sumitporwa;",
+      "jobTitle": "sdfasdf",
+      "salary": "2000",
+      "createdAt": 1680632093812,
+      "id": 6
     }
   ]
 }

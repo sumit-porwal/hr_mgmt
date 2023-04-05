@@ -40,3 +40,17 @@
 .read-the-docs {
   color: #888;
 }
+form div 
+{
+  display: flex;
+  align-items: center;
+  text-align:left;
+  justify-content: center;
+}
+form div label{
+  display: block;
+  width: 20%;
+}
+.submit{
+  width: 60%;
+}
