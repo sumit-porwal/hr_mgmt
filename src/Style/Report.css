@@ -1,0 +1,51 @@
+.reports {
+	text-align: left;
+}
+.List-Report {
+	text-align: left;
+	line-height: 0.8;
+	color: #242424;
+}
+.List-Report div {
+	padding: 5px;
+	background-color: #c5c5c5;
+	margin: 5px;
+}
+.Title {
+	margin: 4px;
+	font-size: 1.2em;
+}
+.subject {
+	margin: 4px;
+	font-size: 0.8em;
+}
+.author-date {
+	display: flex;
+	justify-content: space-between;
+	margin: 4px;
+	font-size: 0.6em;
+}
+.report {
+	padding: 10px;
+	background-color: #383838;
+}
+.report .content {
+	background-color: #252525;
+	padding: 20px;
+}
+.new-report-btn {
+	margin: 20px;
+}
+.report .Title {
+	background-color: #252525;
+	padding: 5px;
+	margin: 3vh;
+}
+.report .subject {
+	padding: 5px;
+	background-color: #252525;
+	margin: 2vh;
+}
+.report button {
+	margin: 10px;
+}

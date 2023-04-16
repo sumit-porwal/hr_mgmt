@@ -1,37 +1,237 @@
 {
+  "report": [
+    {
+      "title": "Sumit porwal",
+      "subject": "This is Test Suject",
+      "author": "",
+      "content": "i did all this shit for nothing bitches",
+      "Subject": "a",
+      "createdAt": 1680961374561,
+      "id": 2
+    },
+    {
+      "title": "Sumit porwal",
+      "subject": "This is Test Suject",
+      "author": "",
+      "content": "i did all this shit for nothing bitches",
+      "Subject": "a",
+      "createdAt": 1680961376886,
+      "id": 3
+    },
+    {
+      "title": "Project Repot",
+      "subject": "This report Provide imp info",
+      "author": "sanjay",
+      "content": "so last night i thought that wouldn't it be awesome if i tryed something like some sort of wonderful stuff to fullfill ",
+      "createdAt": 1680963514977,
+      "id": 4
+    }
+  ],
+  "attendance": [],
+  "activity": [
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1681536174678,
+      "id": 9.003526472743639
+    },
+    {
+      "message": "ummidwar  Logged in",
+      "createdAt": 1681536356394,
+      "id": 10.003526472743639
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1681536383182,
+      "id": 11.003526472743639
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1681550193177,
+      "id": 12.003526472743639
+    },
+    {
+      "message": "Ankit Porwla Just joined The Team",
+      "createdAt": 1681626825654,
+      "id": 13.003526472743639
+    },
+    {
+      "message": "Ankit Porwla Just left The Team",
+      "createdAt": 1681626833490,
+      "id": 14.003526472743639
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1681644168300,
+      "id": 15.003526472743639
+    },
+    {
+      "message": "ummidwar  Logged in",
+      "createdAt": 1681663159511,
+      "id": 16.003526472743637
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1681663653661,
+      "id": 17.003526472743637
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1681668812258,
+      "id": 18.003526472743637
+    }
+  ],
   "applicants": [
     {
-      "name": "sanjay",
-      "email": "asdfas@df",
+      "name": "sumit",
+      "email": "sumit@mail.com",
       "phone": "12345",
       "address": "sumit hosue",
       "Shortlist": false,
-      "createdAt": 1680677179434,
-      "id": 1
-    },
-    {
-      "name": "sanjay",
-      "email": "asdfas@df",
-      "phone": "12345",
-      "address": "sdfsa",
-      "Shortlist": false,
-      "createdAt": 1680677187795,
-      "id": 2
+      "createdAt": 1681536595937,
+      "id": 3
     }
   ],
   "employees": [
     {
-      "name": "sanjay",
+      "name": "sanjay sharma",
       "email": "employee@mail.com",
+      "phone": "453423",
+      "address": "something else",
+      "department": "sumitporwa;",
+      "jobTitle": "Engineer",
+      "id": 6,
+      "attendance": {
+        "2023-04-25": {
+          "date": "2023-04-25",
+          "status": "absent",
+          "description": ""
+        },
+        "2023-04-26": {
+          "date": "2023-04-26",
+          "status": "present",
+          "description": ""
+        },
+        "2023-04-01": {
+          "date": "2023-04-01",
+          "status": "present",
+          "description": ""
+        },
+        "2023-04-02": {
+          "date": "2023-04-02",
+          "status": "present",
+          "description": ""
+        },
+        "2023-04-03": {
+          "date": "2023-04-03",
+          "status": "present",
+          "description": ""
+        },
+        "2023-04-04": {
+          "date": "2023-04-04",
+          "status": "present",
+          "description": ""
+        },
+        "2023-04-05": {
+          "date": "2023-04-05",
+          "status": "present",
+          "description": ""
+        },
+        "2023-04-06": {
+          "date": "2023-04-06",
+          "status": "absent",
+          "description": ""
+        },
+        "2023-04-14": {
+          "date": "2023-04-14",
+          "status": "absent",
+          "description": ""
+        }
+      }
+    },
+    {
+      "name": "sanjay",
+      "email": "sanjay@gmail.com",
       "phone": "12345",
       "address": "sumit hosue",
-      "manager": false,
+      "department": "missionary",
+      "jobTitle": "atroguy",
+      "salary": "3000",
+      "manager": true,
       "password": 1234,
-      "department": "sumitporwa;",
-      "jobTitle": "sdfasdf",
-      "salary": "2000",
-      "createdAt": 1680632093812,
-      "id": 6
+      "createdAt": 1680758143151,
+      "id": 7,
+      "attendance": {
+        "2023-04-01": {
+          "date": "2023-04-01",
+          "status": "present",
+          "description": ""
+        },
+        "2023-04-02": {
+          "date": "2023-04-02",
+          "status": "present",
+          "description": ""
+        },
+        "2023-04-03": {
+          "date": "2023-04-03",
+          "status": "present",
+          "description": ""
+        },
+        "2023-04-04": {
+          "date": "2023-04-04",
+          "status": "present",
+          "description": ""
+        },
+        "2023-04-05": {
+          "date": "2023-04-05",
+          "status": "absent",
+          "description": ""
+        },
+        "2023-04-27": {
+          "date": "2023-04-27",
+          "status": "sick",
+          "description": ""
+        },
+        "2023-04-25": {
+          "date": "2023-04-25",
+          "status": "sick",
+          "description": "because i am"
+        },
+        "2023-04-23": {
+          "date": "2023-04-23",
+          "status": "vacation",
+          "description": ""
+        },
+        "2023-04-17": {
+          "date": "2023-04-17",
+          "status": "late",
+          "description": "because i am"
+        }
+      }
+    },
+    {
+      "name": "ummidwar",
+      "email": "Employee@mail.com",
+      "phone": "12345",
+      "address": "mars",
+      "department": "missionary",
+      "jobTitle": "is awesome",
+      "salary": "3000",
+      "manager": false,
+      "password": 0.4892297604059037,
+      "createdAt": 1681287236841,
+      "id": 8,
+      "attendance": {
+        "2023-04-24": {
+          "date": "2023-04-24",
+          "status": "absent",
+          "description": ""
+        },
+        "2023-04-19": {
+          "date": "2023-04-19",
+          "status": "vacation",
+          "description": ""
+        }
+      }
     }
   ]
 }

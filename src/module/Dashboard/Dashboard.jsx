@@ -1,31 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import EmployeeList from './EmployeeList';
 import ActivityLog from './ActivityLog';
-import Reports from '../Reports';
-
-
+import Reports from '../Report/Reports';
+import axios from 'axios';
+import Query from '../Query';
 const Dashboard = (Employees) => {
- 
+	const reports = Query('get', 'report');
+	const [logs, setLogs] = useState();
+	useEffect(() => {
+		async function fetchData() {
+			// You can await here
+			const response = await axios.get(`http://localhost:8080/activity`);
+			setLogs(response);
+		}
+		fetchData();
+	}, []);
 
-  const logs = [
-    { time: '10:00 am', message: 'User login' },
-    { time: '11:30 am', message: 'Employee added' },
-    { time: '1:45 pm', message: 'Report generated' },
-  ];
-
-  const reports = [
-    {  name: 'Employee Sales Report', data:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero aut aperiam dolores, fuga adipisci magnam excepturi nemo. Tenetur, officiis repellendus.'},
-    { name: 'Attendance Report', data:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero aut aperiam dolores, fuga adipisci magnam excepturi nemo. Tenetur, officiis repellendus.'},
-    { name: 'Performance Report',data:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero aut aperiam dolores, fuga adipisci magnam excepturi nemo. Tenetur, officiis repellendus.' },
-  ];
-
-  return (
-    <div className="dashboard">
-      <EmployeeList employees={Employees.employees} />
-      <ActivityLog logs={logs} />
-      <Reports reports={reports} />
-    </div>
-  );
+	return (
+		<div className='dashboard'>
+			<EmployeeList employees={Employees.employees} />
+			<h2>Reports</h2>
+			<Reports Report={reports} control={false} />
+			<ActivityLog activity={logs} />
+		</div>
+	);
 };
 
 export default Dashboard;

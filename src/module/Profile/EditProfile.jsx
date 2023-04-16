@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, { useEffect } from 'react'
-
+import { useNavigate } from 'react-router-dom';
 
 function EditProfile({employee}) {
+	const navigate = useNavigate();
 	console.log("Edit says" + employee)
   	const [formData, setFormData] = React.useState({
   		name: '',
@@ -29,7 +30,9 @@ function EditProfile({employee}) {
   const onSubmit = async (e) => {
 
     e.preventDefault();
-	axios.patch(`http://localhost:8080/employees/${employee.id}`,employee)
+	await axios.patch(`http://localhost:8080/employees/${employee.id}`,formData)
+	location.reload()
+	
 
   };
   return (
@@ -37,17 +40,13 @@ function EditProfile({employee}) {
  <form onSubmit={onSubmit}>
 		<label htmlFor="name">Name</label>
 		<input type="text" name="name" id="name" value={name} onChange={onChange} />
-      <br />
 		<label htmlFor="Email">Email</label>
 		<input type="Email" name="email" id="email" value={email} onChange={onChange} />
-      <br />
 		<label htmlFor="phone">Phone</label>
 		<input type="number" name="phone" id="phone" value={phone} onChange={onChange} />
-      <br />
 		<label htmlFor="address">Adress</label>
 		<input type="text" name="address" id="address" value={address} onChange={onChange} />
-      <br />
-		<button type="submit">Submit</button>
+		<button className='submit' type="submit">Submit</button>
 
 		</form>
 	</div>
