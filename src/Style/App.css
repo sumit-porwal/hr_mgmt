@@ -1,13 +1,15 @@
 #root {
 	max-width: 1280px;
 	margin: 0 auto;
-	padding: 2rem;
+	padding: 1em 1rem;
 	text-align: center;
 }
 
 .logo {
+	margin-left: 50%;
+	transform: translateX(-50%);
 	height: 6em;
-	padding: 1.5em;
+	padding: 1em;
 	will-change: filter;
 	transition: filter 300ms;
 }
@@ -50,8 +52,10 @@
 	justify-content: space-evenly;
 }
 .AttendanceTable table {
+	box-shadow: 1px 1px 1px #be6600, -1px -1px 1px #be6600;
+
 	padding: 20px;
-	background-color: #2e2e2e;
+	background-color: #fb8500;
 }
 .AttendanceTable div button {
 	margin: 10px;
@@ -62,11 +66,15 @@
 	border-radius: 3px;
 }
 .payroll {
+	color: black;
 	display: flex;
 	flex-direction: column;
 	/* justify-content: center; */
 }
 .payroll div {
+	box-shadow: 1px 1px 1px #37013b, -1px -1px 1px #5e0957;
+
+	background-color: #8ecae6;
 	margin-bottom: 20px;
 	display: flex;
 	justify-content: center;
@@ -75,12 +83,20 @@
 }
 .payroll select {
 	font-size: 1.2em;
+	margin: 5px;
 	padding: 5px;
 }
 .payroll table {
-	background-color: #2e2e2e;
+	background-color: #8ecae6;
 	padding: 20px;
 }
 .payroll table thead {
-	background-color: #444444;
+	background-color: #219ebc;
+}
+.color-guide {
+	display: flex;
+	justify-content: space-around;
+}
+.color-guide div {
+	width: 100%;
 }

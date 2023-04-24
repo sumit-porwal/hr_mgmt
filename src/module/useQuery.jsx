@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React from 'react';
-const URL = 'http://localhost:8080/';
-function Query(method, path, data = {}, deps = []) {
+const URL = 'https://json-web-sever.onrender.com';
+function useQuery(method, path, data = {}, deps = []) {
 	const [response, setResponse] = React.useState();
 	React.useEffect(() => {
 		const fetchQuery = async () => {
@@ -17,4 +17,5 @@ function Query(method, path, data = {}, deps = []) {
 	return response;
 }
 
-export default Query;
+export default useQuery;
+export { URL };

@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import EditReport from './EditReport';
 import axios from 'axios';
-
+import { useNavigate } from 'react-router-dom';
+import { URL } from '../useQuery';
 function ListReports({ Reports, control }) {
 	const [showReport, setShowReport] = useState();
-	const [isEditing, setIsEditing] = useState(false);
+	const [selectedReport, setSelectedReport] = useState();
+	const [isEditing, setIsEditing] = useState(true);
+	const navigate = useNavigate();
+
 	if (!Reports) {
 		return (
 			<>
@@ -13,10 +17,10 @@ function ListReports({ Reports, control }) {
 		);
 	}
 	console.log(Reports);
-	if (isEditing) {
+	if (!isEditing) {
 		return (
 			<>
-				<EditReport />
+				<EditReport Report={selectedReport} setIsEditing={setIsEditing} />
 			</>
 		);
 	}
@@ -37,13 +41,20 @@ function ListReports({ Reports, control }) {
 				<div className='content'>{report.content}</div>
 				{control ? (
 					<>
-						<button onClick={() => setIsEditing(true)}>Edit</button>
+						<button
+							onClick={() => {
+								setIsEditing(false);
+								setSelectedReport(report);
+							}}
+						>
+							Edit
+						</button>
 						<button
 							onClick={() => {
 								axios
-									.delete(`http://localhost:8080/report/${report.id}`)
+									.delete(`${URL}/report/${report.id}`)
 									.catch((err) => console.log(err));
-								setShowReport();
+								navigate('/Profile');
 							}}
 						>
 							Delete
@@ -66,7 +77,7 @@ function ListReports({ Reports, control }) {
 					<div
 						key={report.id}
 						onClick={() => {
-							// setIsEditing(true);
+							setIsEditing(true);
 							setShowReport(handleSelect(report));
 						}}
 					>

@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import ReportComponent from './Reportcomponent';
 import NewReport from './NewReport';
 import ListReports from './ListReports';
-const Report = ({ Report, control }) => {
-	const [isCreating, setIsCreating] = useState(false);
+import useQuery from '../useQuery';
 
+const Report = ({ control }) => {
+	const [isCreating, setIsCreating] = useState(false);
+	const Report = useQuery('get', '/report');
 	if (isCreating) {
 		return (
 			<>
-				<NewReport />
+				<NewReport setIsCreating={setIsCreating} />
 				<button onClick={() => setIsCreating(false)}>Back</button>
 			</>
 		);

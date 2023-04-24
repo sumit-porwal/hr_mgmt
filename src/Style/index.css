@@ -2,18 +2,25 @@
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
+	--bg-color: rgb(124, 148, 255) 3;
 
 	color-scheme: light dark;
 	color: rgba(255, 255, 255, 0.87);
-	background-color: #242424;
+	background: radial-gradient(ellipse at top, #d1c452, transparent),
+		radial-gradient(ellipse at bottom, #3a4234, transparent),
+		radial-gradient(ellipse at left, #cda1e2, transparent),
+		radial-gradient(ellipse at right, #da2222, transparent);
 
+	/* background: blur(10px); */
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
 }
-
+ul {
+	padding-left: 0;
+}
 body {
 	margin: 0 20vw;
 	min-width: 320px;
@@ -25,20 +32,25 @@ input {
 	margin: 10px;
 }
 .search input {
-	min-width: 50vw;
-	height: 5vh;
+	border-radius: 10px;
+	box-sizing: border-box;
+	font-size: 1.2em;
+	padding: 10px;
+	background: #023047;
+	width: 100%;
+	height: auto;
 	margin: 20px 0;
 }
+
 .employee-list h2 {
 	text-align: center;
 }
 
 .employee-list div {
-	color: #242424;
+	box-shadow: 1px 1px 1px #be6600, -1px -1px 1px#be6600;
+	color: black;
 	text-align: left;
-	background-color: #c5c5c5;
-}
-.employee-list div {
+	background-color: #ffb703;
 	display: flex;
 	border-radius: 2px;
 	/* padding: 0.1em; */
@@ -65,43 +77,50 @@ input {
 } */
 .employee-list .employee-manage:hover {
 	cursor: pointer;
-	color: white;
-	background-color: #9c5252;
+	background-color: #2ead07;
 }
 h1 {
-	font-size: 3.2em;
-	line-height: 1.1;
+	width: 100%;
+	/* background-color: #ffffff88; */
+	padding: 20px;
 }
-
+h1 img {
+	height: auto;
+	width: 20vw;
+}
 button {
+	box-shadow: 1px 1px 1px #be6600, -1px -1px 1px#be6600;
+
+	color: #161616;
 	border-radius: 8px;
 	border: 1px solid transparent;
 	padding: 0.6em 1.2em;
 	font-size: 1em;
 	font-weight: 500;
 	font-family: inherit;
-	background-color: #1a1a1a;
+	background-color: #fb8500;
 	cursor: pointer;
 	transition: border-color 0.25s;
 }
 button:hover {
-	border-color: #646cff;
+	border-color: #f0faff;
 }
 button:focus,
 button:focus-visible {
-	outline: 4px auto -webkit-focus-ring-color;
+	outline: 6px auto -webkit-focus-ring-color;
 }
 .app-icon {
+	box-shadow: 1px 1px 1px rgb(70, 70, 70), -1px -1px 1px rgb(66, 66, 66);
+
 	padding: 0.5em;
 	margin: 10px;
 	display: flex;
 	justify-content: space-around;
 	border-radius: 5px;
-	color: #1a1a1a;
-	background-color: #c5c5c5;
+	background-color: #023047;
 }
 .Shortlisted {
-	color: rgb(0, 153, 0);
+	color: rgb(198, 255, 198);
 }
 .app-icon span {
 	display: block;
@@ -109,18 +128,6 @@ button:focus-visible {
 	font-size: 1.5em;
 }
 
-@media (prefers-color-scheme: light) {
-	:root {
-		color: #213547;
-		background-color: #ffffff;
-	}
-	a:hover {
-		color: #cfd2ff;
-	}
-	button {
-		background-color: #f9f9f9;
-	}
-}
 @media screen and (max-width: 700px) {
 	body {
 		margin: 0;
@@ -135,28 +142,68 @@ button:focus-visible {
 	text-shadow: 2px 2px 8px red, -2px -2px 8px red;
 }
 
-.activity-log ul li::after {
-	content: '';
-	position: relative;
-	border-left: dashed 3px rgb(185, 185, 185);
-}
-.activity-log ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
 .employee-profile {
 	padding: 20px;
-	background-color: #161616;
+	background-color: #8ecae6;
 }
 .employee-profile p {
 	text-align: left;
-	margin-left: 10px;
+	margin: 10px;
+
 	display: block;
-	width: 40%;
 }
 .employee-profile div {
+	box-shadow: 1px 1px 1px rgb(31, 69, 126),
+		-1px -1px 1px rgba(47, 84, 141, 0.445);
+
 	margin: 10px;
+	align-items: center;
 	display: flex;
-	background-color: #080808;
+	background-color: #14748b;
+}
+.employee-profile p:first-child {
+	width: 20%;
+	font-size: 0.8em;
+}
+.employee-profile p:last-child {
+	text-shadow: 1px 1px 3px rgb(5, 10, 56), -1px -1px 3px rgb(3, 10, 39);
+
+	width: 80%;
+}
+.employee-profile button {
+	margin: 10px;
+}
+h2 {
+	box-shadow: 1px 1px 1px rgb(34, 34, 34), -1px -1px 1px rgb(43, 43, 43);
+	text-shadow: 1px 1px 3px rgb(5, 10, 56), -1px -1px 3px rgb(3, 10, 39);
+	padding: 10px;
+	background-color: #1616169d;
+}
+
+.hovertext {
+	box-shadow: 1px 1px 1px #be6600, -1px -1px 1px #be6600;
+
+	position: relative;
+}
+
+.hovertext:before {
+	content: attr(data-hover);
+	visibility: hidden;
+	opacity: 0;
+	width: 140px;
+	background-color: rgb(31, 31, 31);
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+	padding: 10px;
+	transition: opacity 1s ease-in-out;
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 110%;
+}
+
+.hovertext:hover:before {
+	opacity: 1;
+	visibility: visible;
 }

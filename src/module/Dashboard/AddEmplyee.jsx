@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import { URL } from '../useQuery';
 const AddEmployee = () => {
 	const navigate = useNavigate();
 
@@ -26,7 +26,7 @@ const AddEmployee = () => {
 		try {
 			const response = await axios({
 				method: 'post',
-				url: 'http://localhost:8080/employees',
+				url: `${URL}/employees`,
 				'content-type': 'application/json',
 				data: formData,
 			}).then((res) => {

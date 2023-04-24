@@ -1,10 +1,10 @@
 import React from 'react';
-import Query from '../Query';
+import useQuery, { URL } from '../useQuery';
 import axios from 'axios';
 
 export default function Offboarding() {
 	const [value, setValue] = React.useState(0); // integer state
-	let employees = Query('get', 'employees', {}, [value]);
+	let employees = useQuery('get', '/employees', {}, [value]);
 	if (!employees) {
 		return <p>Loading...</p>;
 	}
@@ -17,8 +17,8 @@ export default function Offboarding() {
 						onClick={() => {
 							// forceUpdate();
 							if (confirm('Are you sure you want to reomve this employee')) {
-								axios.delete(`http://localhost:8080/employees/${employee.id}`);
-								axios.post(`http://localhost:8080/activity`, {
+								axios.delete(`${URL}/employees/${employee.id}`);
+								axios.post(`${URL}/activity`, {
 									message: `${employee.name} Just left The Team`,
 								});
 							}

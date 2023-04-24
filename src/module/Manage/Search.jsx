@@ -25,7 +25,7 @@ function Search({ employees }) {
 	if (active) {
 		return (
 			<>
-				<active.component employee={active.prop} />
+				<active.component employee={active.prop} setActive={setActive} />
 				<button onClick={() => setActive()}>Back</button>
 			</>
 		);
@@ -64,12 +64,24 @@ function Search({ employees }) {
 		<>
 			<div className='employee-details'>
 				{selectedEmployee && (
-					<div>
-						<h3>{selectedEmployee.name}</h3>
-						<p>{selectedEmployee.position}</p>
-						<p>{selectedEmployee.email}</p>
-						<p>{selectedEmployee.phone}</p>
-						<p>{selectedEmployee.address}</p>
+					<div className='employee-profile'>
+						<h2>{selectedEmployee.name}</h2>
+
+						<div>
+							<p>Email</p> <p>{selectedEmployee.email}</p>
+						</div>
+						<div>
+							<p>Phone</p> <p> {selectedEmployee.phone}</p>
+						</div>
+						<div>
+							<p>Address </p> <p>{selectedEmployee.address}</p>
+						</div>
+						<div>
+							<p>Department</p> <p> {selectedEmployee.department}</p>
+						</div>
+						<div>
+							<p>Job Title</p> <p>{selectedEmployee.jobTitle}</p>
+						</div>
 						<button
 							onClick={() =>
 								setActive({

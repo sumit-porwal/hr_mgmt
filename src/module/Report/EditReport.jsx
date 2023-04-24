@@ -1,6 +1,16 @@
 import React from 'react';
-
-function EditReport({ Report }) {
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { URL } from '../useQuery';
+function EditReport({ Report, setIsEditing }) {
+	if (!Report) {
+		return (
+			<>
+				<p>loading ..</p>
+			</>
+		);
+	}
+	const navigate = useNavigate();
 	const [report, setReport] = React.useState({
 		title: Report.title,
 		subject: Report.subject,
@@ -18,8 +28,9 @@ function EditReport({ Report }) {
 
 	function handleSubmit(event) {
 		event.preventDefault();
-		axios.patch(`http://localhost:8080/${Report.id}`, report);
+		axios.patch(`${URL}/report/${Report.id}`, report);
 		console.log(report);
+		navigate('/Profile');
 		// handle report submission logic here
 	}
 

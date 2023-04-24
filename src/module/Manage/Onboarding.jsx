@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-
+import { URL } from '../useQuery';
 function Onboarding() {
 	const [Manager, setManager] = useState(true);
 	const [formData, setFormData] = useState({
@@ -27,18 +27,18 @@ function Onboarding() {
 		try {
 			const response = await axios({
 				method: 'post',
-				url: 'http://localhost:8080/employees',
+				url: `${URL}/employees`,
 				'content-type': 'application/json',
 				data: formData,
 			}).then((res) => {
 				setisCreated('true');
 				navigator.clipboard.writeText(formData.password);
-				axios.delete(`http://localhost:8080/applicants/${id}`);
+				axios.delete(`${URL}/applicants/${id}`);
 				// formData.passwor
 				// navigate("/newEmployee")
 				console.log(res);
 			});
-			axios.post(`http://localhost:8080/activity`, {
+			axios.post(`${URL}/activity`, {
 				message: `${formData.name} Just joined The Team`,
 			});
 		} catch (error) {
@@ -49,7 +49,7 @@ function Onboarding() {
 	const [applicant, SetApplicant] = React.useState();
 	React.useEffect(() => {
 		const fetchApplicant = async () => {
-			const applicant = await axios.get('http://localhost:8080/applicants');
+			const applicant = await axios.get(`${URL}/applicants`);
 			SetApplicant(applicant);
 		};
 		fetchApplicant();

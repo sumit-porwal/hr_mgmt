@@ -11,7 +11,7 @@ form div label {
 	grid-column: 1 / 3;
 }
 form {
-	padding: 5px 10vw;
+	padding: 5px 0;
 	margin: 10px;
 	display: grid;
 	font-size: 1.4em;
@@ -25,6 +25,8 @@ label {
 	width: 20%;
 }
 .attendance {
+	box-shadow: 1px 1px 1px rgb(70, 70, 70), -1px -1px 1px rgb(66, 66, 66);
+
 	text-emphasis: left;
 	justify-content: flex-start;
 	display: flex;
@@ -33,5 +35,27 @@ label {
 .attendance label {
 	margin: 10px;
 	display: block;
+	width: 100%;
+}
+.login {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+}
+.login label {
+	align-self: flex-start;
+}
+.login input {
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid black;
+	background: none;
+}
+.login input:focus {
+	/* border: none; */
+	outline: none;
+}
+.login button {
+	margin: 20px;
 	width: 100%;
 }

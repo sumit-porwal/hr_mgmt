@@ -1,9 +1,12 @@
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import React from 'react';
-
-function ReportForm() {
+import { useNavigate } from 'react-router-dom';
+import { URL } from '../useQuery';
+function ReportForm({ setIsCreating }) {
 	let { user } = jwtDecode(localStorage.getItem('token'));
+	const navigate = useNavigate();
+
 	const [report, setReport] = React.useState({
 		title: '',
 		subject: '',
@@ -22,45 +25,32 @@ function ReportForm() {
 	function handleSubmit(event) {
 		event.preventDefault();
 		console.log(report);
-		axios.post('http://localhost:8080/report', report);
-		axios.post(`http://localhost:8080/activity`, {
+		axios.post(`${URL}/report`, report);
+		axios.post(`${URL}/activity`, {
 			message: `${user.name} Just Posted A Report`,
 		});
-
+		navigate('/profile');
 		// handle report submission logic here
 	}
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<label>
-				Title:
-				<input
-					type='text'
-					name='title'
-					value={report.title}
-					onChange={handleChange}
-				/>
-			</label>
-			<br />
-			<label>
-				Subject:
-				<input
-					type='text'
-					name='subject'
-					value={report.subject}
-					onChange={handleChange}
-				/>
-			</label>
-			<br />
-			<label>
-				Content:
-				<textarea
-					name='content'
-					value={report.content}
-					onChange={handleChange}
-				/>
-			</label>
-			<br />
+		<form className='new-report' onSubmit={handleSubmit}>
+			<label htmlFor='title'>Title:</label>
+			<input
+				type='text'
+				name='title'
+				value={report.title}
+				onChange={handleChange}
+			/>
+			<label htmlFor='subject'>Subject:</label>
+			<input
+				type='text'
+				name='subject'
+				value={report.subject}
+				onChange={handleChange}
+			/>
+			<label htmlFor='content'>Content:</label>
+			<textarea name='content' value={report.content} onChange={handleChange} />
 			<button type='submit'>Submit</button>
 		</form>
 	);

@@ -4,11 +4,13 @@
 .List-Report {
 	text-align: left;
 	line-height: 0.8;
-	color: #242424;
 }
 .List-Report div {
+	box-shadow: 1px 1px 1px rgb(70, 70, 70), -1px -1px 1px rgb(66, 66, 66);
+
+	color: black;
 	padding: 5px;
-	background-color: #c5c5c5;
+	background-color: #ffb703;
 	margin: 5px;
 }
 .Title {
@@ -26,26 +28,45 @@
 	font-size: 0.6em;
 }
 .report {
+	border-radius: 10px;
 	padding: 10px;
-	background-color: #383838;
+	background-color: #023047;
 }
 .report .content {
-	background-color: #252525;
+	background-color: #044768;
 	padding: 20px;
 }
 .new-report-btn {
 	margin: 20px;
 }
 .report .Title {
-	background-color: #252525;
+	background-color: #063c55;
 	padding: 5px;
 	margin: 3vh;
 }
 .report .subject {
 	padding: 5px;
-	background-color: #252525;
 	margin: 2vh;
 }
 .report button {
 	margin: 10px;
+}
+.new-report {
+	text-align: left;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+}
+.new-report input {
+	width: 100%;
+}
+
+.new-report textarea {
+	padding: 10px;
+	margin: 10px;
+	width: 100%;
+	height: 40vh;
+}
+.new-report button {
+	align-self: center;
 }

@@ -1,19 +1,24 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-
 function Nav({ auth, logout }) {
 	if (!auth.isAuthenticated) return <></>;
 	return (
-		<nav>
+		<nav className='mainNav'>
 			<ul>
-				<li>
-					<NavLink to='/Manage'>Manage</NavLink>
+				<li className='nav-item'>
+					<NavLink className='nav-link' to='/Manage'>
+						Manage
+					</NavLink>
 				</li>
-				<li>
-					<NavLink to='/dashboard'>Dashboard</NavLink>
+				<li className='nav-item'>
+					<NavLink className='nav-link' to='/dashboard'>
+						Dashboard
+					</NavLink>
 				</li>
-				<li>
-					<NavLink to='/Profile'>Profile</NavLink>
+				<li className='nav-item'>
+					<NavLink className='nav-link' to='/Profile'>
+						Profile
+					</NavLink>
 				</li>
 				{/* <li><Link to="/AddEmployee">NewEmployee</Link></li> */}
 				{/* <li><Link to="/Apply">Apply</Link></li> */}

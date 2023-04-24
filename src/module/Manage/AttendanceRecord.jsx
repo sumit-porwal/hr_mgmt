@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { URL } from '../useQuery';
 function RecordAttendance({ employee }) {
 	const [attendance, setAttendance] = useState({
 		date: '',
@@ -10,7 +11,7 @@ function RecordAttendance({ employee }) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		employee.attendance[attendance.date] = attendance;
-		axios.patch(`http://localhost:8080/employees/${employee.id}`, {
+		axios.patch(`${URL}/employees/${employee.id}`, {
 			...employee,
 		});
 		// Here, you could send the attendance data to a backend API or add it to a local store

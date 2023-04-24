@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import URL from './useQuery';
 const Apply = () => {
 	const navigate = useNavigate();
-
 	const [formData, setFormData] = useState({
 		name: '',
 		email: '',
@@ -27,7 +26,7 @@ const Apply = () => {
 		try {
 			const response = await axios({
 				method: 'post',
-				url: 'http://localhost:8080/applicants',
+				url: `${URL}/applicants`,
 				'content-type': 'application/json',
 				data: formData,
 			}).then((res) => {

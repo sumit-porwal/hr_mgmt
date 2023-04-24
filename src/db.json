@@ -1,30 +1,28 @@
 {
   "report": [
     {
-      "title": "Sumit porwal",
-      "subject": "This is Test Suject",
-      "author": "",
-      "content": "i did all this shit for nothing bitches",
-      "Subject": "a",
-      "createdAt": 1680961374561,
-      "id": 2
-    },
-    {
-      "title": "Sumit porwal",
-      "subject": "This is Test Suject",
-      "author": "",
-      "content": "i did all this shit for nothing bitches",
-      "Subject": "a",
-      "createdAt": 1680961376886,
-      "id": 3
-    },
-    {
-      "title": "Project Repot",
+      "title": "Project Repot 12342",
       "subject": "This report Provide imp info",
       "author": "sanjay",
       "content": "so last night i thought that wouldn't it be awesome if i tryed something like some sort of wonderful stuff to fullfill ",
       "createdAt": 1680963514977,
       "id": 4
+    },
+    {
+      "title": "Report for project XYZ",
+      "subject": "this is to highlight important discorveries during",
+      "author": "sanjay",
+      "content": "\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a risus quis augue luctus consequat. Duis egestas mattis neque, ac semper dolor accumsan in. In nunc neque, gravida vel molestie sit amet, posuere eu nunc. Aliquam erat libero, consectetur sed sodales eget, condimentum in eros. Proin et ultrices lorem. Pellentesque id nunc nec diam egestas mattis. Donec ornare sagittis molestie. Sed interdum mattis elit quis hendrerit. Praesent vulputate posuere libero id luctus. Proin vitae facilisis eros, id luctus massa. Mauris dignissim ex dolor, non pellentesque urna laoreet ac.",
+      "createdAt": 1682180891690,
+      "id": 6
+    },
+    {
+      "title": "degesdfasdfas",
+      "subject": "gsdfgdfg",
+      "author": "sanjay",
+      "content": "gsdfgaeywq345w4856i7ie57i6en5i5b",
+      "createdAt": 1682188020950,
+      "id": 7
     }
   ],
   "attendance": [],
@@ -78,6 +76,206 @@
       "message": "sanjay  Logged in",
       "createdAt": 1681668812258,
       "id": 18.003526472743637
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1681990701159,
+      "id": 19.003526472743637
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1682076453794,
+      "id": 20.003526472743637
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1682076892763,
+      "id": 21.003526472743637
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1682081497703,
+      "id": 22.003526472743637
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1682150592832,
+      "id": 23.003526472743637
+    },
+    {
+      "message": "ummidwar Just left The Team",
+      "createdAt": 1682158419730,
+      "id": 24.003526472743637
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1682175161223,
+      "id": 25.003526472743637
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1682175167764,
+      "id": 26.003526472743637
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1682175213659,
+      "id": 27.003526472743637
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1682175632828,
+      "id": 28.003526472743637
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682180889073,
+      "id": 29.003526472743637
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682180891725,
+      "id": 30.003526472743637
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682181176479,
+      "id": 31.003526472743637
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682181778513,
+      "id": 32.00352647274364
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682181793904,
+      "id": 33.00352647274364
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682181794145,
+      "id": 34.00352647274364
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682181794337,
+      "id": 35.00352647274364
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682181818820,
+      "id": 36.00352647274364
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682181821338,
+      "id": 37.00352647274364
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682181821552,
+      "id": 38.00352647274364
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682181821739,
+      "id": 39.00352647274364
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682181821935,
+      "id": 40.00352647274364
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682181822113,
+      "id": 41.00352647274364
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682181822308,
+      "id": 42.00352647274364
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682181830441,
+      "id": 43.00352647274364
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682183555958,
+      "id": 44.00352647274364
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682185963910,
+      "id": 45.00352647274364
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682188020951,
+      "id": 46.00352647274364
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682189163056,
+      "id": 47.00352647274364
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682192121907,
+      "id": 48.00352647274364
+    },
+    {
+      "message": "sanjay Just Posted A Report",
+      "createdAt": 1682192171039,
+      "id": 49.00352647274364
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1682192842174,
+      "id": 50.00352647274364
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1682192951111,
+      "id": 51.00352647274364
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1682196435831,
+      "id": 52.00352647274364
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1682197523679,
+      "id": 53.00352647274364
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1682198540597,
+      "id": 54.00352647274364
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1682202362402,
+      "id": 55.00352647274364
+    },
+    {
+      "message": "sanjay  Logged in",
+      "createdAt": 1682202402176,
+      "id": 56.00352647274364
+    },
+    {
+      "message": "sanjay sinha  Logged in",
+      "createdAt": 1682237860814,
+      "id": 57.00352647274364
+    },
+    {
+      "message": "sanjay sinha  Logged in",
+      "createdAt": 1682247814409,
+      "id": 58.00352647274364
     }
   ],
   "applicants": [
@@ -86,18 +284,27 @@
       "email": "sumit@mail.com",
       "phone": "12345",
       "address": "sumit hosue",
-      "Shortlist": false,
+      "Shortlist": true,
       "createdAt": 1681536595937,
       "id": 3
+    },
+    {
+      "name": "mark",
+      "email": "marc@mars.com",
+      "phone": "12345",
+      "address": "mars",
+      "Shortlist": true,
+      "createdAt": 1682192941913,
+      "id": 4
     }
   ],
   "employees": [
     {
       "name": "sanjay sharma",
       "email": "employee@mail.com",
-      "phone": "453423",
-      "address": "something else",
-      "department": "sumitporwa;",
+      "phone": "8965234532",
+      "address": "69,fourth Street,building Twenty, England",
+      "department": "Administrator",
       "jobTitle": "Engineer",
       "id": 6,
       "attendance": {
@@ -113,8 +320,8 @@
         },
         "2023-04-01": {
           "date": "2023-04-01",
-          "status": "present",
-          "description": ""
+          "status": "sick",
+          "description": "because i am"
         },
         "2023-04-02": {
           "date": "2023-04-02",
@@ -149,12 +356,12 @@
       }
     },
     {
-      "name": "sanjay",
+      "name": "sanjay sinha",
       "email": "sanjay@gmail.com",
-      "phone": "12345",
-      "address": "sumit hosue",
-      "department": "missionary",
-      "jobTitle": "atroguy",
+      "phone": "9150031319",
+      "address": "235 Park Tital M/O saturn",
+      "department": "Administration",
+      "jobTitle": "Admin",
       "salary": "3000",
       "manager": true,
       "password": 1234,
@@ -205,30 +412,30 @@
           "date": "2023-04-17",
           "status": "late",
           "description": "because i am"
-        }
-      }
-    },
-    {
-      "name": "ummidwar",
-      "email": "Employee@mail.com",
-      "phone": "12345",
-      "address": "mars",
-      "department": "missionary",
-      "jobTitle": "is awesome",
-      "salary": "3000",
-      "manager": false,
-      "password": 0.4892297604059037,
-      "createdAt": 1681287236841,
-      "id": 8,
-      "attendance": {
-        "2023-04-24": {
-          "date": "2023-04-24",
-          "status": "absent",
+        },
+        "2023-04-29": {
+          "date": "2023-04-29",
+          "status": "present",
           "description": ""
         },
-        "2023-04-19": {
-          "date": "2023-04-19",
-          "status": "vacation",
+        "2023-04-08": {
+          "date": "2023-04-08",
+          "status": "present",
+          "description": ""
+        },
+        "2023-04-09": {
+          "date": "2023-04-09",
+          "status": "present",
+          "description": ""
+        },
+        "2023-04-10": {
+          "date": "2023-04-10",
+          "status": "present",
+          "description": ""
+        },
+        "2023-04-18": {
+          "date": "2023-04-18",
+          "status": "present",
           "description": ""
         }
       }

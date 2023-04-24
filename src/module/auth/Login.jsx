@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { NavigationType, useNavigate } from 'react-router-dom';
+import { NavigationType, useNavigate, NavLink } from 'react-router-dom';
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 import { useEffect } from 'react';
+import { URL } from '../useQuery';
 const Login = ({ setAuth }) => {
 	const Navigate = useNavigate();
 	const [formData, setFormData] = useState({
@@ -21,15 +22,12 @@ const Login = ({ setAuth }) => {
 		e.preventDefault();
 		try {
 			console.log(formData);
-			const response = await axios.post(
-				'http://localhost:8080/login',
-				formData
-			);
+			const response = await axios.post(`${URL}/login`, formData);
 			const token = response.data;
 			localStorage.setItem('token', token);
 			const { user } = jwt_decode(token);
 			setAuth({ isAuthenticated: true, user: user });
-			axios.post('http://localhost:8080/activity/', {
+			axios.post(`${URL}/activity/`, {
 				message: `${user.name}  Logged in`,
 			});
 
@@ -49,9 +47,9 @@ const Login = ({ setAuth }) => {
 
 	return (
 		<div>
-			<h1>Login</h1>
+			<h2>Login</h2>
 			<p className='error'>{err_msg}</p>
-			<form onSubmit={onSubmit}>
+			<form className='login' onSubmit={onSubmit}>
 				<label>Email</label>
 				<input
 					type='email'
@@ -76,6 +74,10 @@ const Login = ({ setAuth }) => {
 					Login
 				</button>
 			</form>
+			<p>
+				Not an Employee apply
+				<NavLink to='/Apply'>here</NavLink>
+			</p>
 		</div>
 	);
 };

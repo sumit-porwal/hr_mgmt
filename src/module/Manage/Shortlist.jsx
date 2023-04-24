@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import axios from 'axios';
 import React from 'react';
+import { URL } from '../useQuery';
 
 function Shortlist() {
 	const [short, setShort] = useState('true');
 	const [applicant, SetApplicant] = React.useState();
 	React.useEffect(() => {
 		const fetchApplicant = async () => {
-			const applicant = await axios.get('http://localhost:8080/applicants');
+			const applicant = await axios.get(`${URL}/applicants`);
 			SetApplicant(applicant);
 		};
 		fetchApplicant();
@@ -24,15 +25,13 @@ function Shortlist() {
 						onClick={() => {
 							setShort((prev) => !prev);
 							if (!applicant.Shortlist) {
-								axios.patch(
-									`http://localhost:8080/applicants/${applicant.id}`,
-									{ Shortlist: true }
-								);
+								axios.patch(`${URL}/applicants/${applicant.id}`, {
+									Shortlist: true,
+								});
 							} else {
-								axios.patch(
-									`http://localhost:8080/applicants/${applicant.id}`,
-									{ Shortlist: false }
-								);
+								axios.patch(`${URL}/applicants/${applicant.id}`, {
+									Shortlist: false,
+								});
 							}
 						}}
 						className={applicant.Shortlist ? 'Shortlisted' : 'Shortlist'}
@@ -43,9 +42,7 @@ function Shortlist() {
 						onClick={() => {
 							setShort((prev) => !prev);
 							if (confirm('Are you sure you want to reomve this employee')) {
-								axios.delete(
-									`http://localhost:8080/applicants/${applicant.id}`
-								);
+								axios.delete(`${URL}/applicants/${applicant.id}`);
 							}
 						}}
 					>

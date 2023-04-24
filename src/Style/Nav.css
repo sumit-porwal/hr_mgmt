@@ -1,28 +1,33 @@
 .active {
-	box-shadow: inset 2px 2px 10px rgb(73, 73, 73), inset -2px -2px 10px grey;
+	background-color: #535bf2;
+	color: white;
+}
+nav {
+	position: sticky;
 }
 nav ul {
-	padding: 0 10vw;
+	background-color: rgba(0, 0, 0, 0.356);
+	/* padding: 0 10vw; */
 	display: flex;
 	justify-content: space-around;
 }
 nav ul li {
 	width: 100%;
-	/* display: flex; */
-	margin-bottom: 3vh;
-	/* flex:1; */
+	/* margin-bottom: 3vh; */
 	list-style-type: none;
 }
 nav ul li a {
 	display: block;
+	text-shadow: 1px 1px 3px rgb(32, 50, 214), -1px -1px 3px rgb(39, 75, 238);
 	border-radius: 3px;
-	background-color: #cacaca;
+	/* background-color: #cacaca; */
 	margin: 2px;
-	/* flex:1; */
 	padding: 2vh 2vw;
 }
 nav ul li a:hover {
-	background-color: rgb(201, 201, 201);
+	text-shadow: 2px 2px 3px rgb(197, 228, 60), -2px -2px 3px rgb(207, 186, 64);
+
+	color: white;
 }
 a {
 	font-size: 1.2em;
@@ -32,4 +37,10 @@ a {
 }
 a:hover {
 	color: #535bf2;
+}
+@media screen and (max-width: 400px) {
+	.mainNav {
+		position: sticky;
+		bottom: 1vh;
+	}
 }

@@ -3,24 +3,16 @@ import EmployeeList from './EmployeeList';
 import ActivityLog from './ActivityLog';
 import Reports from '../Report/Reports';
 import axios from 'axios';
-import Query from '../Query';
+import useQuery from '../useQuery';
 const Dashboard = (Employees) => {
-	const reports = Query('get', 'report');
-	const [logs, setLogs] = useState();
-	useEffect(() => {
-		async function fetchData() {
-			// You can await here
-			const response = await axios.get(`http://localhost:8080/activity`);
-			setLogs(response);
-		}
-		fetchData();
-	}, []);
+	const reports = useQuery('get', '/report');
+	const logs = useQuery('get', '/activity');
 
 	return (
 		<div className='dashboard'>
 			<EmployeeList employees={Employees.employees} />
 			<h2>Reports</h2>
-			<Reports Report={reports} control={false} />
+			<Reports control={false} />
 			<ActivityLog activity={logs} />
 		</div>
 	);

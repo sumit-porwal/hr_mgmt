@@ -1,8 +1,7 @@
 import axios from 'axios';
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Query from '../Query';
-
+import { URL } from '../useQuery';
 function EmployeeEdit({ employee }) {
 	const navigate = useNavigate();
 	const [formData, setFormData] = React.useState({
@@ -32,7 +31,9 @@ function EmployeeEdit({ employee }) {
 	};
 	const onSubmit = async (e) => {
 		e.preventDefault();
-		await Query('patch', `employees/${employee.id}`, { ...formData });
+		await axios.patch(`${URL}/employees/${employee.id}`, {
+			...formData,
+		});
 		navigate('/dashboard');
 	};
 	return (

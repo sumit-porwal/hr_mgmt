@@ -1,12 +1,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import useQuery from './useQuery';
+
 // import AddEmployee from './module/Dashboard/AddEmplyee'
 import Dashboard from './Dashboard/Dashboard';
 import Manage from './Manage/Manage';
 import Profile from './Profile/Profile';
 import Login from './auth/Login';
 import Apply from './Apply';
-import Query from './Query';
 import Attendance from './Profile/Attendance';
 function withAuth(auth, component) {
 	return auth.isAuthenticated && auth.user.manager ? (
@@ -29,8 +30,7 @@ function AppRoutes({ auth, setAuth }) {
 		localStorage.removeItem('token');
 		setAuth({ isAuthenticated: false, user: null });
 	};
-
-	const Employees = Query('get', 'employees');
+	const Employees = useQuery('get', '/employees');
 	return (
 		<>
 			<Routes>

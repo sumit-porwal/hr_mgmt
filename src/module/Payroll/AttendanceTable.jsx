@@ -33,9 +33,14 @@ export default function AttendanceTable({ attendanceData }) {
 		);
 		const attendance = attendanceData[date.format('YYYY-MM-DD')] || {};
 		const status = attendance.status || '';
+		const description = attendance.description || '';
 
 		cells.push(
-			<td key={day} className={status}>
+			<td
+				key={day}
+				className={`${status} hovertext`}
+				data-hover={`${status} || ${description}`}
+			>
 				{day}
 			</td>
 		);
@@ -93,12 +98,14 @@ export default function AttendanceTable({ attendanceData }) {
 				<button onClick={handlePrevMonth}>Previous Month</button>
 				<button onClick={handleNextMonth}>Next Month</button>
 			</div>
-			<div className='present'>Present</div>
-			<div className='absent'>Absent</div>
-			<div className='sick'>Sick</div>
-			<div className='late'>Late</div>
-			<div className='vacation'>Vacation</div>
-			<div className='personal'>Personal</div>
+			<div className='color-guide'>
+				<div className='present'>Present</div>
+				<div className='absent'>Absent</div>
+				<div className='sick'>Sick</div>
+				<div className='late'>Late</div>
+				<div className='vacation'>Vacation</div>
+				<div className='personal'>Personal</div>
+			</div>
 		</div>
 	);
 }

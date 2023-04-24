@@ -3,12 +3,12 @@ import { useNavigate, NavLink, Routes, Route } from 'react-router-dom';
 import Shortlist from './Shortlist';
 import Onboarding from './Onboarding';
 import Search from './Search';
-import Query from '../Query';
+import useQuery from '../useQuery';
 import Offboarding from './Offboarding';
 
 const Manage = () => {
 	// const navigate = useNavigate()
-	const employees = Query('get', 'employees');
+	const employees = useQuery('get', '/employees');
 
 	return (
 		<>
