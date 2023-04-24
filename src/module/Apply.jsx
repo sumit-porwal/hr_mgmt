@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import URL from './useQuery';
+import { URL } from './useQuery';
 const Apply = () => {
 	const navigate = useNavigate();
 	const [formData, setFormData] = useState({
